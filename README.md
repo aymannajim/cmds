@@ -3,11 +3,11 @@ some useful FiveM ESX commands for Roleplay
 
 **These are mainly some useful RP commands for ESX final:**
 >**`/h`** → Hands up
-**`/k`** →   Kneel as if you're being arrested
-**`/job`** → Shows your actual job
-**`/ping`** →  Shows your actual ping
-**`/cash`** →  Shows your current cash
-**`/license`** →  Copies your license ( identifier ) to clipboard - very useful for admins to ask for in order to run sql queries to find smth about a player
+>**`/k`** →   Kneel as if you're being arrested
+>**`/job`** → Shows your actual job
+>**`/ping`** →  Shows your actual ping
+>**`/cash`** →  Shows your current cash
+>**`/license`** →  Copies your license ( identifier ) to clipboard - very useful for admins to ask for in order to run sql queries to find smth about a player
 
 **Some bonus stuff:**
 > * **Warns** you when your ping is high ( > 150 ms )
