@@ -26,6 +26,16 @@ end)
 
 -------------------------- SOME USEFUL RP STUFF ---------------------------
 
+--- Command to show society money
+RegisterCommand('socmoney', function(source,args)
+	local societyname = PlayerData.job.name
+	-- if PlayerData.job.grade >= 2 then
+	ESX.TriggerServerCallback('esx_society:getSocietyMoney', function(acc)
+		exports['mythic_notify']:SendAlert('inform', "["..PlayerData.job.label.."] Your society money: "..acc.."DH", 12000)
+	end, societyname)
+	-- end
+end)
+
 --- MAKE PLANES ENGINE CUT OFF AFTER seconds of riding them
 ------------------ You need to add exception for people with license
 Citizen.CreateThread(function()
