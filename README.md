@@ -13,6 +13,8 @@ some useful FiveM ESX commands for Roleplay
 >
 >**`/cash`** →  Shows your current cash
 >
+>**`/bank`** →  Shows your current bank balance
+>
 >**`/license`** →  Copies your license ( identifier ) to clipboard - very useful for admins to ask for in order to run sql queries to find smth about a player
 
 **Some bonus stuff:**
