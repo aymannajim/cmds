@@ -13,9 +13,20 @@ RegisterCommand('cash', function(source, args)
 	local cash = xPlayer.getMoney()
 	if cash < 0 then
 		local debt = cash * -1
-		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = "Vous avez une dette de <span style='font-weight:500;'>".. debt .."DH", length = 12000 })
+		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = "You have a debt of <span style='font-weight:500;'>".. debt .."DH", length = 12000 })
 	else
 		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = "Vous avez <span style='font-weight:500;'>".. cash .."DH</span> dans votre poche", length = 12000 })
+	end
+end)
+
+RegisterCommand('bank', function(source, args)
+	local xPlayer = ESX.GetPlayerFromId(source)
+	local balance = xPlayer.getAccount('bank').money
+	if balance < 0 then
+		local debt = balance * -1
+		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'error', text = "You have an unpaid loan of <span style='font-weight:500;'>".. debt .."DH", length = 12000 })
+	else
+		TriggerClientEvent('mythic_notify:client:SendAlert', source, { type = 'inform', text = "You have <span style='font-weight:500;'>".. balance .."DH</span> on your bank account", length = 12000 })
 	end
 end)
 
